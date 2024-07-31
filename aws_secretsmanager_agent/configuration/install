@@ -32,6 +32,7 @@ chmod 755 ${AGENTDIR}
 
 install -D -T -m 755 ${AGENTBIN} ${AGENTDIR}/bin/${AGENTBIN}
 install -D -T -m 755 ${TOKENSCRIPT} ${AGENTDIR}/bin/${TOKENSCRIPT}
+chown -R ${AGENTUSER} ${AGENTDIR}
 install -T -m 755 ${TOKENSCRIPT}.service ${SYSTEMDFILES}/${TOKENSCRIPT}.service 
 install -T -m 755 ${AGENTSCRIPT}.service ${SYSTEMDFILES}/${AGENTSCRIPT}.service
 
